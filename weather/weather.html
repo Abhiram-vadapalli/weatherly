@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Dashboard</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/boxicons/2.1.4/css/boxicons.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="weather.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="nav">
+            <img src="logo.png" alt="" class="logo"/>
+            <div class="cont-input">
+                <input type="text" name="city" class="cinput" placeholder="Enter the city name">
+                <button type="button" class="search">
+                    <i class="bx bx-search"></i> Search
+                </button>
+                <button type="button" class="location">
+                    <i class="bx bx-target-lock"></i> Current Location
+                </button>
+            </div>
+        </div>
+        <div class="weather-data">
+            <div class="weather-left">
+                <div class="card">
+                    <div class="current-weather">
+                        <div class="details">
+                            <p>Now</p>
+                            <h2 class="current-temp">____&deg;C</h2>
+                            <p class="current-desc">______</p>
+                        </div>
+                        <img class="weather-icon" src="clouds.png" alt="weather">
+                    </div>
+                    <br>
+                    <div class="card-footer">
+                        <p><i class="bx bx-calendar"></i> <span class="current-date">____</span></p>
+                        <p><i class="bx bx-map"></i> <span class="current-city">____</span></p>
+                    </div>
+                </div>
+                <div class="card">
+                    <h2>5 days weather forecast</h2>
+                    <div class="day-forecast">
+                        <div class="fore-item">
+                            <div class="icon-wrapper">
+                                <img class="weather-icon1" src="cloudy.png" alt="cloudy">
+                                <span class="forecast-temp">____&deg;C</span>
+                            </div>
+                            <p class="forecast-date">_____</p>
+                            <p class="forecast-desc">_____</p>
+                        </div>
+                        <div class="fore-item">
+                            <div class="icon-wrapper">
+                                <img class="weather-icon1" src="cloudy.png" alt="cloudy">
+                                <span class="forecast-temp">____&deg;C</span>
+                            </div>
+                            <p class="forecast-date">_____</p>
+                            <p class="forecast-desc">_____</p>
+                        </div>
+                        <div class="fore-item">
+                            <div class="icon-wrapper">
+                                <img class="weather-icon1" src="cloudy.png" alt="cloudy">
+                                <span class="forecast-temp">____&deg;C</span>
+                            </div>
+                            <p class="forecast-date">_____</p>
+                            <p class="forecast-desc">_____</p>
+                        </div>
+                        <div class="fore-item">
+                            <div class="icon-wrapper">
+                                <img class="weather-icon1" src="cloudy.png" alt="cloudy">
+                                <span class="forecast-temp">____&deg;C</span>
+                            </div>
+                            <p class="forecast-date">_____</p>
+                            <p class="forecast-desc">_____</p>
+                        </div>
+                        <div class="fore-item">
+                            <div class="icon-wrapper">
+                                <img class="weather-icon1" src="cloudy.png" alt="cloudy">
+                                <span class="forecast-temp">____&deg;C</span>
+                            </div>
+                            <p class="forecast-date">_____</p>
+                            <p class="forecast-desc">_____</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="weather-right">
+                <h2>Today's Highlights</h2>
+                <div class="highlights">
+                    <div class="card">
+                        <div class="card-head">
+                            <p>Air quality index</p>
+                            <p class="air-index aqi-2">Good</p>
+                        </div>
+                        <i class="bx bx-wind" style="font-size: 3em;"></i>
+                        <div class="air-indices">
+                            <div class="item">
+                                <p>PM2.5</p>
+                                <h2 class="pm25">____</h2>
+                            </div>
+                            <div class="item">
+                                <p>PM10</p>
+                                <h2 class="pm10">____</h2>
+                            </div>
+                            <div class="item">
+                                <p>SO2</p>
+                                <h2 class="so2">____</h2>
+                            </div>
+                            <div class="item">
+                                <p>CO2</p>
+                                <h2 class="co2">____</h2>
+                            </div>
+                            <div class="item">
+                                <p>NO</p>
+                                <h2 class="no">____</h2>
+                            </div>
+                            <div class="item">
+                                <p>O3</p>
+                                <h2 class="o3">____</h2>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-head">
+                            <p>Sunrise & Sunset</p>
+                        </div>
+                        <div class="sunrise-sunset">
+                            <div class="item">
+                                <img src="sunrise.png" class="weather-icon2" alt="sunrise">
+                                <div>
+                                    <p>Sunrise</p>
+                                    <h2 class="sunrise">____</h2>
+                                </div>
+                            </div>
+                            <div class="item">
+                                <img src="sunset.png" class="weather-icon2" alt="sunset">
+                                <div>
+                                    <p>Sunset</p>
+                                    <h2 class="sunset">____</h2>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-head">
+                            <p>Humidity</p>
+                        </div>
+                        <div class="card-items">
+                            <img src="drop.png" class="weather-icon1" alt="drop">
+                            <h2 class="humidity">____%</h2>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-head">
+                            <p>Pressure</p>
+                        </div>
+                        <div class="card-items">
+                            <img src="pressure.png" class="weather-icon1" alt="pressure">
+                            <h2 class="pressure">____hpa</h2>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-head">
+                            <p>Visibility</p>
+                        </div>
+                        <div class="card-items">
+                            <img src="visibility.png" class="weather-icon1" alt="visibility">
+                            <h2 class="visibility">____Km</h2>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-head">
+                            <p>Wind speed</p>
+                        </div>
+                        <div class="card-items">
+                            <img src="wind.png" class="weather-icon1" alt="wind">
+                            <h2 class="windspeed">____m/s</h2>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-head">
+                            <p>Feels like</p>
+                        </div>
+                        <div class="card-items">
+                            <img src="temperature.png" class="weather-icon1" alt="temperature">
+                            <h2 class="feels-like">____&deg;C</h2>
+                        </div>
+                    </div>
+                </div>
+                <div class="hourly-forecast">
+                    <div class="card">
+                        <p>9Am</p>
+                        <img src="clouds.png" class="weather-icon1" alt="clouds">
+                        <p class="hourly-temp">____&deg;c</p>
+                    </div>
+                    <div class="card">
+                        <p>10Am</p>
+                        <img src="clouds.png" class="weather-icon1" alt="clouds">
+                        <p class="hourly-temp">____&deg;c</p>
+                    </div>
+                    <div class="card">
+                        <p>11Am</p>
+                        <img src="clouds.png" class="weather-icon1" alt="clouds">
+                        <p class="hourly-temp">____&deg;c</p>
+                    </div>
+                    <div class="card">
+                        <p>12Pm</p>
+                        <img src="clouds.png" class="weather-icon1" alt="clouds">
+                        <p class="hourly-temp">____&deg;c</p>
+                    </div>
+                    <div class="card">
+                        <p>1Pm</p>
+                        <img src="clouds.png" class="weather-icon1" alt="clouds">
+                        <p class="hourly-temp">____&deg;c</p>
+                    </div>
+                    <div class="card">
+                        <p>2Pm</p>
+                        <img src="clouds.png" class="weather-icon1" alt="clouds">
+                        <p class="hourly-temp">____&deg;c</p>
+                    </div>
+                    <div class="card">
+                        <p>3Pm</p>
+                        <img src="clouds.png" class="weather-icon1" alt="clouds">
+                        <p class="hourly-temp">____&deg;c</p>
+                    </div>
+                    <div class="card">
+                        <p>4Pm</p>
+                        <img src="clouds.png" class="weather-icon1" alt="clouds">
+                        <p class="hourly-temp">____&deg;c</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="weather.js"></script>
+</body>
+</html>

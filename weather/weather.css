@@ -1,0 +1,329 @@
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root {
+    --bg-color: #212529;
+    --aqi-1: #2daad8;
+    --aqi-2: #fb9f87;
+    --aqi-3: #094479;
+    --aqi-4: #8e7578;
+    --aqi-5: #90b8cf;
+    --aqi-6: #564144;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; 
+}
+.logo{
+    height: 120px;
+    width: 350px;
+    border-radius: 10px;
+    
+}
+
+body {
+    min-height: 100vh;
+    color: black;
+    font-family: "Merriweather", serif;
+    background-color: powderblue;
+}
+
+.nav {
+    height: auto;
+    background-color: rgb(14, 14, 59);
+    display: flex;
+    position: sticky;
+    top: 0;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+    padding: 15px 10px;
+}
+
+.cinput {
+    background-color: rgb(62, 61, 61);
+    border: none;
+    padding: 12px;
+    font-size: 12px;
+    border-radius: 20px;
+    color: whitesmoke;
+}
+
+.search, .location {
+    border: none;
+    font-size: 16px;
+    padding: 12px;
+    border-radius: 25px;
+    cursor: pointer;
+}
+
+.search {
+    background-color: #62a1c7;
+}
+
+.location {
+    background-color: orange;
+}
+
+.card {
+    background-color: #62a1c7; 
+    padding: 15px;
+    border-radius: 15px;
+    margin-bottom: 15px;
+}
+
+p {
+    font-size: 14px;
+    color: black;
+}
+
+h2 {
+    font-size: 32px;
+    font-weight: 500;
+}
+
+.weather-data {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 12px;
+}
+
+.weather-left {
+    grid-column: span 1;
+}
+
+.current-weather {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.weather-icon, .weather-icon1, .weather-icon2 {
+    height: 60px;
+    width: 60px;
+}
+
+.weather-icon1 {
+    padding: 10px;
+}
+
+.weather-icon2 {
+    width: 70px;
+}
+
+.details {
+    margin-right: 150px;
+}
+
+.fore-item {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    place-items: center;
+    margin-bottom: 15px;
+}
+
+.icon-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center; 
+}
+
+.weather-right {
+    grid-column: span 3;   
+}
+
+.weather-right, h2 {
+    margin-bottom: 10px;
+}
+
+.highlights {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    column-gap: 15px;
+}
+
+.card-head {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.air-index {
+    color: black;
+    padding: 5px 10px;
+    border-radius: 20px;
+}
+
+.aqi-1 { background-color: var(--aqi-1); }
+.aqi-2 { background-color: var(--aqi-2); }
+.aqi-3 { background-color: var(--aqi-3); }
+.aqi-4 { background-color: var(--aqi-4); }
+.aqi-5 { background-color: var(--aqi-5); }
+.aqi-6 { background-color: var(--aqi-6); }
+
+.highlights, .card:nth-of-type(1), .card:nth-of-type(2) {
+    grid-column: span 2;
+}
+
+.air-indices {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    place-items: center;
+}
+
+.sunrise-sunset i {
+    font-size: 50px;
+    color: orange;
+}
+
+.air-indices p {
+    text-align: center;
+}
+
+.sunrise-sunset {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.sunrise-sunset .item {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.items {
+    display: flex;
+    align-items: center;
+    gap: 0;
+}
+
+.items h2 {
+    margin-top: 15px;
+}
+
+.card-item {
+    display: flex;
+    justify-content: space-between;
+}
+
+.hourly-forecast {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.hourly-forecast .card {
+    text-align: center;
+    padding: 10px;
+    background-color: #62a1c7;
+    border-radius: 10px;
+    color: white;
+    height: 120px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.hourly-forecast .card img {
+    width: 50px;
+    height: 50px;
+}
+
+hr {
+    margin-bottom: 10px;
+}
+
+@media (max-width: 1100px) {
+    .weather-data {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    .weather-right {
+        grid-column: span 2;
+    }
+    .weather-right .hourly-forecast {
+        grid-template-columns: repeat(6, 1fr);
+    }
+    .weather-right .highlights {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    .weather-right .highlights .card:nth-of-type(1) {
+        grid-column: span 3;
+    }
+}
+
+@media (max-width: 1040px) {
+    .weather-data {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .weather-right {
+        grid-column: span 1;
+    }
+    .weather-right .highlights {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .weather-right .highlights .card:nth-of-type(1) {
+        grid-column: span 2;
+    }
+    .weather-right .hourly-forecast {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+@media (max-width: 992px) {
+    .weather-data .weather-right .highlights .card {
+        grid-column: span 2;
+    }
+}
+
+@media (max-width: 660px) {
+    .nav {
+        flex-direction: column;
+        align-items: flex-start;
+        background-color: white; 
+    }
+    .nav h2 {
+        margin-bottom: 8px;
+    }
+    .cinput, .search, .location {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+}
+
+@media (max-width: 580px) {
+    .weather-data .weather-right .highlights .air-indices {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+@media (max-width: 550px) {
+    .weather-data {
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .weather-right {
+        grid-column: span 1;
+    }
+    .highlights, .hourly-forecast {
+        grid-template-columns: 1fr;
+    }
+    .details {
+        margin-right: 0;
+    }
+    .sunrise-sunset {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .card {
+        margin-bottom: 20px;
+    }
+    .card-item {
+        flex-direction: column;
+    }
+    .items h2 {
+        margin-top: 10px;
+    }
+}
